@@ -1,91 +1,120 @@
 .dark-background {
-    background-color: #1b1b2f;
+  background-color: #1b1b2f;
 }
 
 .text-color {
-    color: #e43f5a;
+  color: #e43f5a;
 }
 
 body {
-    background-color: #162447;
+  background-color: #162447;
 }
 
 .flex-container {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    height: 600px;
-    justify-content: center;
-    transition: 2s all ease;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 600px;
+  justify-content: center;
+  transition: 2s all ease;
 }
 
 .flex-item {
-    background: #e43f5a;
-    border: 1pt solid black;
-    width: 10px;
-    transition: 0.1s all ease;
+  background: #e43f5a;
+  border: 1pt solid black;
+  width: 10px;
+  transition: 0.1s all ease;
 }
 
 .row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
 }
 
 #input-panel {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .center {
-    display: flex;
-    justify-content: center;
-    margin: auto;
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
 
 #sorting {
-    margin-bottom: 50px;
-    transform: rotate(180deg) scaleX(-1); 
+  margin-bottom: 50px;
+  transform: rotate(180deg) scaleX(-1);
 }
 
 .range-input {
-    box-sizing: border-box;
-    top: 50%;
-    left: 50%;  
-    transform: translate(-50%, -50%);
-    align-items: center;
-    border-radius: 10px;
-    line-height: 50px;
-    display: flex;
-    vertical-align: middle;
-    height: 50px;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  border-radius: 10px;
+  line-height: 50px;
+  display: flex;
+  vertical-align: middle;
+  height: 50px;
+  justify-content: center;
 }
 .range-input input {
-    -webkit-appearance: none;
-    width: 200px;
-    height: 2px;
-    background-color: #e43f5a;
-
-    position: absolute;
-    top: 50%;
+  -webkit-appearance: none;
+  width: 200px;
+  height: 2px;
+  background-color: #e43f5a;
+  position: absolute;
+  top: 50%;
 }
 .range-input input::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    background-color: #eee;
-    border: 2px solid #1f4068;
-    border-radius: 50%;
-    outline: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border: 2px solid #1f4068;
+  border-radius: 50%;
+  outline: none;
 }
 .range-input input::-webkit-slider-thumb:hover {
-    background-color: #1f4068;
+  background-color: #1f4068;
 }
 
-.range-input .label{
-    color: white;
-    font-weight:600;
-    display: flex; 
-    height: 35px; 
-    line-height: 35px; 
-    margin: auto;
+.range-input .label {
+  color: white;
+  font-weight: 600;
+  display: flex;
+  height: 35px;
+  line-height: 35px;
+  margin: auto 1rem;
+}
+#speed_input,
+#size_input {
+  position: relative;
+}
+@media screen and (max-width: 700px) {
+  #input-panel {
+    display: flex;
+    flex-direction: column;
+  }
+  #speed_input,
+  #size_input {
+    position: relative;
+  }
+  #control-panel {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 60vw;
+    max-width: 10rem;
+  }
+  .btn-group-md {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-outline-light {
+    margin: 0.1rem auto;
+  }
 }
